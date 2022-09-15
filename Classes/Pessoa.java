@@ -3,16 +3,35 @@ package ProgramaStartCapgemini.Classes;
 public class Pessoa {
 
 	// Attributes
-	float peso;
-	float altura;
-	String nome;
+	private float peso;
+	private float altura;
+	
+	public Pessoa() {     // Creating constructor
+		System.out.println("Running the constructor");
+	}
 
 	public float calcularIMC() {
 		float imc = peso / (altura * altura);
 		return imc;
 	}
-
-	public String correr() {
-		return nome + " esta correndo";
+	
+	// Accessor methods
+	public void setPeso(float peso) {
+		this.peso = peso;
+	}
+	
+	public float getPeso() {
+		return peso;
+	}
+	
+	public void setAltura(float altura) {
+		this.altura = altura;
+	}
+	
+	public float getAltura() {
+		return altura;
 	}
 }
+
+
+
